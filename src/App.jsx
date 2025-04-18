@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import { Routes, Route } from "react-router";
 import AppLayout from "./layout/AppLayout";
-import Homepage from "./pages/HomePage/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import MoviePage from "./pages/Movies/MoviePage";
 import MovieDetail from "./pages/MovieDetail/MovieDetail";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
