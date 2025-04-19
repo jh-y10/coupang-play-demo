@@ -41,7 +41,7 @@ const AppLayout = () => {
                 className="me-2 search-box"
                 aria-label="Search"
               />
-              <Button className="search-button">
+              <Button className="search-button" variant="light">
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </Button>
             </Form>

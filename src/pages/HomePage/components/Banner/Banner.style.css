@@ -1,0 +1,39 @@
+.banner {
+  height: 56vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.banner:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 56vh;
+  background: linear-gradient(to top, #000, transparent);
+}
+
+.banner-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-left: 20px;
+  color: #fff;
+}
+
+.banner-desc * {
+  z-index: 1;
+}
+
+.banner-desc h1 {
+ margin-bottom: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .banner-desc {
+    width: 36%;
+    padding-left: 2rem;
+  }
+}
