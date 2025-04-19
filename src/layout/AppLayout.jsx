@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Outlet } from "react-router";
+import { Link, Outlet } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
@@ -31,8 +31,8 @@ const AppLayout = () => {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="/">메인</Nav.Link>
-              <Nav.Link href="/movies">영화</Nav.Link>
+              <Link to="/">메인</Link>
+              <Link to="/movies">영화</Link>
             </Nav>
             <Form className="d-flex">
               <Form.Control

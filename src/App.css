@@ -11,6 +11,16 @@
 .menu a {
   font-size: 17px;
   font-weight: 600;
+  text-decoration: none;
+  color: gray;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+.menu a:first-child {
+  margin-right: 10px;
 }
 
 .search-box:focus,
