@@ -9,6 +9,11 @@ import "./PopularMovieSlide.style.css";
 
 const PopularMovieSlide = () => {
   const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 3000, min: 1850 },
+      items: 7,
+      slidesToSlide: 7,
+    },
     largeDesktop: {
       breakpoint: { max: 3000, min: 1500 },
       items: 6,

@@ -10,8 +10,13 @@ import "./UncomingMovieSlide.style.css";
 
 const UncomingMovieSlide = () => {
   const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 3000, min: 1850 },
+      items: 7,
+      slidesToSlide: 7,
+    },
     largeDesktop: {
-      breakpoint: { max: 3000, min: 1500 },
+      breakpoint: { max: 1849, min: 1500 },
       items: 6,
       slidesToSlide: 6,
     },
