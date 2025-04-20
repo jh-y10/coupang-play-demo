@@ -16,7 +16,7 @@ const RatedMovieSlide = () => {
       slidesToSlide: 7,
     },
     largeDesktop: {
-      breakpoint: { max: 3000, min: 1500 },
+      breakpoint: { max: 1849, min: 1500 },
       items: 6,
       slidesToSlide: 6,
     },

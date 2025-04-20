@@ -10,7 +10,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const AppLayout = () => {
   return (
-    <div>
+    <div className="app-nav">
       <Navbar
         bg="dark"
         data-bs-theme="dark"
