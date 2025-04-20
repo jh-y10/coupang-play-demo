@@ -9,8 +9,13 @@ import "./PopularMovieSlide.style.css";
 
 const PopularMovieSlide = () => {
   const responsive = {
+    largeDesktop: {
+      breakpoint: { max: 3000, min: 1500 },
+      items: 6,
+      slidesToSlide: 6,
+    },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 1499, min: 1024 },
       items: 5,
       slidesToSlide: 5,
     },
@@ -31,6 +36,7 @@ const PopularMovieSlide = () => {
   };
 
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
+  console.log("ddd", data);
 
   if (isLoading) {
     return <Spinner animation="border" />;

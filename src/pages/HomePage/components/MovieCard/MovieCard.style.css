@@ -68,11 +68,11 @@
   margin-top: 10px;
 }
 
-.overlay p.adult {
+.adult {
   background-color: red;
 }
 
-.overlay p.non-adult {
+.non-adult {
   background-color: green;
 }
 

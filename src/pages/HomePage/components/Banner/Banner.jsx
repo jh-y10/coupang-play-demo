@@ -6,7 +6,7 @@ import "./Banner.style.css";
 
 const Banner = () => {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
-  console.log("ddd", data);
+
   if (isLoading) {
     return <Spinner animation="border" />;
   }
