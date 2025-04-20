@@ -5,14 +5,14 @@ import Spinner from "react-bootstrap/Spinner";
 import "./Banner.style.css";
 
 const Banner = () => {
-  const { data, isLoading, isError, Error } = usePopularMoviesQuery();
+  const { data, isLoading, isError, error } = usePopularMoviesQuery();
   console.log("ddd", data);
   if (isLoading) {
-    <Spinner animation="border" />;
+    return <Spinner animation="border" />;
   }
 
   if (isError) {
-    <Alert variant="danger">{Error.message}</Alert>;
+    return <Alert variant="danger">{error.message}</Alert>;
   }
 
   return (

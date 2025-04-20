@@ -1,0 +1,33 @@
+.movie-slide {
+  padding-top: 100px;
+}
+
+.movie-slide > h3 {
+  margin-left: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.carousel-container {
+  height: 440px;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-slide {
+    padding-top: 150px;
+  }
+
+  .movie-slide > h3 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .movie-slide {
+    padding-top: 200px;
+  }
+
+  .movie-slide > h3 {
+    font-size: 36px;
+  }
+}
