@@ -12,8 +12,8 @@ const RatedMovieSlide = () => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 3000, min: 1850 },
-      items: 7,
-      slidesToSlide: 7,
+      items: 8,
+      slidesToSlide: 8,
     },
     largeDesktop: {
       breakpoint: { max: 1849, min: 1500 },
