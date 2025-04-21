@@ -4,10 +4,10 @@ import Spinner from "react-bootstrap/esm/Spinner";
 import { Alert } from "bootstrap";
 import MovieSlider from "../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../constants/responsive";
-import "./RatedMovieSlide.style.css";
+import "./UpcomingMovieSlide.style.css";
 
-const RatedMovieSlide = () => {
-  const { data, isLoading, isError, error } = useMoviesQuery("top_rated");
+const UncomingMovieSlide = () => {
+  const { data, isLoading, isError, error } = useMoviesQuery("upcoming");
 
   if (isLoading) {
     return <Spinner animation="border" />;
@@ -19,12 +19,12 @@ const RatedMovieSlide = () => {
 
   return (
     <MovieSlider
-      title="Top Rated Movies"
+      title="Upcoming Movies"
       movies={data.results}
       responsive={responsive}
-      subject="top-rated"
+      subject="upcoming"
     />
   );
 };
 
-export default RatedMovieSlide;
+export default UncomingMovieSlide;

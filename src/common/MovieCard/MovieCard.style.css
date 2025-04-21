@@ -32,33 +32,55 @@
   font-weight: 700;
 }
 
-.overlay span {
+.genre-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.genre-list span {
+  display: inline-block;
+  width: min-content;
+  height: min-content;
+  padding: 0 5px;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  background-color: cornflowerblue;
+}
+
+.genre-list span:last-child {
+  margin-right: 0;
+}
+
+.overlay > span {
   font-size: 16px;
   font-weight: 500;
 }
 
-.overlay span::after {
+.overlay > span::after {
   content: "•";
   margin: 0 5px;
 }
 
-.overlay span:last-of-type::before {
+.overlay > span:last-of-type::before {
   content: "☺︎";
   font-size: 150%;
   color: green;
 }
 
-.overlay span:nth-last-of-type(2)::after {
+.overlay > span:first-of-type::after {
   margin-right: 0;
 }
 
-.overlay span:last-of-type::after {
+.overlay > span:last-of-type::after {
   content: none;
 }
 
-.overlay span:nth-of-type(2)::before {
+.overlay > span:first-of-type::before {
   content: "★";
   color: yellow;
+  margin-right: 3px;
 }
 
 .overlay p {
