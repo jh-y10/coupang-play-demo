@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link, Outlet } from "react-router";
+import { Link, Outlet, useNavigate } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import pageStore from "../stores/pageStore";
 
 const AppLayout = () => {
+  const [keyword, setKeyword] = useState("");
+  const { updatePage } = pageStore();
+  const navigate = useNavigate();
+
+  const searchByKeyword = (event) => {
+    event.preventDefault();
+    navigate(`/movies?q=${keyword}`);
+    setKeyword("");
+    updatePage(1);
+  };
+
   return (
     <div className="app-nav">
       <Navbar
@@ -34,14 +46,16 @@ const AppLayout = () => {
               <Link to="/">메인</Link>
               <Link to="/movies">영화</Link>
             </Nav>
-            <Form className="d-flex">
+            <Form className="d-flex" onSubmit={searchByKeyword}>
               <Form.Control
                 type="search"
                 placeholder="Search"
                 className="me-2 search-box"
                 aria-label="Search"
+                value={keyword}
+                onChange={(event) => setKeyword(event.target.value)}
               />
-              <Button className="search-button" variant="light">
+              <Button type="submit" className="search-button" variant="light">
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </Button>
             </Form>

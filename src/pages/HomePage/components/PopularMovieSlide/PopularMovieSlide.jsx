@@ -7,7 +7,6 @@ import { responsive } from "../../../../constants/responsive";
 
 const PopularMovieSlide = () => {
   const { data, isLoading, isError, error } = useMoviesQuery("popular");
-  console.log("ddd", data);
 
   if (isLoading) {
     return <Spinner animation="border" />;
