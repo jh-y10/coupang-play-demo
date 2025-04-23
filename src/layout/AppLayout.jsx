@@ -21,6 +21,8 @@ const AppLayout = () => {
     updatePage(1);
   };
 
+  const goToMovies = () => updatePage(1);
+
   return (
     <div className="app-nav">
       <Navbar
@@ -44,7 +46,9 @@ const AppLayout = () => {
               navbarScroll
             >
               <Link to="/">메인</Link>
-              <Link to="/movies">영화</Link>
+              <Link to="/movies" onClick={goToMovies}>
+                영화
+              </Link>
             </Nav>
             <Form className="d-flex" onSubmit={searchByKeyword}>
               <Form.Control

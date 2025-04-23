@@ -56,7 +56,7 @@ const Moviepage = () => {
               onPageChange={handlePageClick}
               pageRangeDisplayed={3}
               marginPagesDisplayed={2}
-              pageCount={data?.total_pages}
+              pageCount={data?.total_pages > 500 ? 500 : data?.total_pages}
               previousLabel="< previous"
               pageClassName="page-item"
               pageLinkClassName="page-link"
