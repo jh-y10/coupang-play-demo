@@ -3,3 +3,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.sort-box {
+  display: flex;
+  justify-content: center;
+}
+
+.sort-box button:first-child {
+  margin-right: 30px;
+}
