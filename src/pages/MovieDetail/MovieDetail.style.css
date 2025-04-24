@@ -1,0 +1,57 @@
+.posterImg {
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.posterImg img {
+  width: 100%;
+  height: auto;
+}
+
+.detail-desc {
+  padding-top: 20px;
+}
+
+.score-box {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.score-box span:first-child {
+  display: flex;
+  margin-right: 10px;
+}
+
+.score-box span:first-child::before {
+  content: "";
+  display: inline-block;
+  background-image: url("https://m.media-amazon.com/images/G/01/imdb/images/social/imdb_logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 30px;
+}
+
+.score-box span:last-child {
+  display: flex;
+}
+
+.score-box span:last-child::before {
+  content: "";
+  display: inline-block;
+  background-image: url("https://noona-netflix-react-query.vercel.app/people4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 30px;
+}
+
+.score-box span:last-child::after {
+  content: "";
+}
+
+@media screen and (min-width: 992px) {
+  .posterImg img {
+    width: 500px;
+  }
+}

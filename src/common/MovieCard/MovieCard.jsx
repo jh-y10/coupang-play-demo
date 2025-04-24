@@ -1,9 +1,11 @@
 import React from "react";
 import "./MovieCard.style.css";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
+import { useNavigate } from "react-router";
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
+  const navigate = useNavigate();
 
   const showGenre = (genreIdList) => {
     if (!genreData) {
@@ -18,6 +20,10 @@ const MovieCard = ({ movie }) => {
     return genreNameList;
   };
 
+  const goToDetail = () => {
+    navigate(`/movies/${movie.id}`);
+  };
+
   return (
     <div
       className="movie-card"
@@ -27,6 +33,7 @@ const MovieCard = ({ movie }) => {
           `https://media.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}` +
           ")",
       }}
+      onClick={goToDetail}
     >
       <div className="overlay">
         <h1>{movie.title}</h1>
@@ -37,7 +44,7 @@ const MovieCard = ({ movie }) => {
             </span>
           ))}
         </div>
-        <span>{movie.vote_average}</span>
+        <span>{movie.vote_average.toFixed(1)}</span>
         <span>
           {Math.round(movie.popularity)}
           <br />
