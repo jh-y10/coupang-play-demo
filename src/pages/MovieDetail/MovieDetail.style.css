@@ -50,8 +50,6 @@
   content: "";
 }
 
-@media screen and (min-width: 992px) {
-  .posterImg img {
-    width: 500px;
-  }
-}
+/* @media screen and (min-width: 992px) {
+
+} */
